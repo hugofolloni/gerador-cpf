@@ -1,5 +1,14 @@
 import random
 
+def print_cpf(cpf):
+    first_part = cpf[0:3]
+    second_part = cpf[3:6]
+    third_part = cpf[6:9]
+    fourth_part = cpf[9:11]
+    printable_cpf = first_part + '.' + second_part + '.' + third_part + '-' + fourth_part
+    print('\n' + printable_cpf)
+
+
 def check_digits(cpf):
     sum = 0
     for i in range(9):
@@ -17,13 +26,7 @@ def check_digits(cpf):
         second_digit = 0
     cpf += str(second_digit)
 
-    first_part = cpf[0:3]
-    second_part = cpf[3:6]
-    third_part = cpf[6:9]
-    fourth_part = cpf[9:11]
-    printable_cpf = first_part + '.' + second_part + '.' + third_part + '-' + fourth_part
-    print('\n' + printable_cpf)
-
+    print_cpf(cpf)
     validate_cpf(cpf)
         
 
